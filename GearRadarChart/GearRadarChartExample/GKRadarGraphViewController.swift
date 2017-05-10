@@ -133,35 +133,6 @@ extension GKRadarGraphViewController {
     }
 }
 
-extension GKRadarGraphViewController: UIPickerViewDataSource {
-    
-    // returns the number of 'columns' to display.
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        
-        return 1
-    }
-    
-    // returns the # of rows in each component..
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
-        return pickerViewData.count
-    }
-}
-
-extension GKRadarGraphViewController: UIPickerViewDelegate {
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerViewData[row].rawValue
-    }
-    
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        let selection = pickerViewData[row]
-        radarGraphView.animateWithType(selection.seriesAnimation)
-    }
-}
-
-
 extension GKRadarGraphViewController {
     
     //

@@ -22,19 +22,6 @@
 
 import Foundation
 import UIKit
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l < r
-  case (nil, _?):
-    return true
-  default:
-    return false
-  }
-}
-
 
 /// Layer that draws a serie in the radar graph.
 internal class GKRadarGraphSerieLayer: CAShapeLayer {
@@ -228,16 +215,14 @@ extension GKRadarGraphSerieLayer {
         let bezierPath: UIBezierPath = UIBezierPath()
         var allSerieVertices: [CGPoint] = []
         
-        for i in 0..<outerVertices.count {
-            
-            let point = outerVertices[i]
-            
-            let differenceX = point.x - circleCenter.x
-            let differenceY = point.y - circleCenter.y
+        outerVertices.enumerated().forEach { (offset, vertex) in
+        
+            let differenceX = vertex.x - circleCenter.x
+            let differenceY = vertex.y - circleCenter.y
             
             // scalar multiplication
-            let scalarMultiplier = serieInstance.percentageValues.count > i
-                ? serieInstance.percentageValues[i]
+            let scalarMultiplier = serieInstance.percentageValues.count > offset
+                ? serieInstance.percentageValues[offset]
                 : 0
             
             let pointX = circleCenter.x + (differenceX * scalarMultiplier)
@@ -247,12 +232,9 @@ extension GKRadarGraphSerieLayer {
             
             allSerieVertices.append(vertex)
             
-            if i == 0 {
-                
+            if offset == 0 {
                 bezierPath.move(to: vertex)
-                
             } else {
-                
                 bezierPath.addLine(to: vertex)
             }
         }
@@ -281,17 +263,14 @@ extension GKRadarGraphSerieLayer {
         let fromPath: UIBezierPath = UIBezierPath()
         let toPath: UIBezierPath = UIBezierPath()
         
-        for i in 0..<parameters.count {
-            
-            if i == 0 {
-                
+        serie?.vertices.enumerated().forEach { (offset, vertex) in
+        
+            if offset == 0 {
                 fromPath.move(to: circleCenter)
-                toPath.move(to: serie!.vertices[0])
-                
+                toPath.move(to: vertex)
             } else {
-                
                 fromPath.addLine(to: circleCenter)
-                toPath.addLine(to: serie!.vertices[i])
+                toPath.addLine(to: vertex)
             }
         }
         
@@ -319,17 +298,16 @@ extension GKRadarGraphSerieLayer {
         let toPath: UIBezierPath = UIBezierPath()
         
         // Make an all-zero path
-        for i in 0..<serieInstance.vertices.count {
-            
-            let fromPoint: CGPoint = i < lastAnimatedVertexIndex
-                ? serieInstance.vertices[i]
+        serieInstance.vertices.enumerated().forEach { (offset, vertex) in
+            let fromPoint: CGPoint = offset < lastAnimatedVertexIndex
+                ? vertex
                 : circleCenter
             
-            let toPoint: CGPoint = i < lastAnimatedVertexIndex + 1
-                ? serieInstance.vertices[i]
+            let toPoint: CGPoint = offset < lastAnimatedVertexIndex + 1
+                ? vertex
                 : circleCenter
             
-            if i == 0 {
+            if offset == 0 {
                 
                 fromPath.move(to: fromPoint)
                 toPath.move(to: toPoint)
@@ -339,8 +317,9 @@ extension GKRadarGraphSerieLayer {
                 fromPath.addLine(to: fromPoint)
                 toPath.addLine(to: toPoint)
             }
+
         }
-        
+
         fromPath.close()
         toPath.close()
         
@@ -362,7 +341,7 @@ extension GKRadarGraphSerieLayer {
         pathAnimation.duration = CFTimeInterval(duration)
         pathAnimation.isRemovedOnCompletion = false
         pathAnimation.fillMode = kCAFillModeForwards
-        pathAnimation.delegate = self as! CAAnimationDelegate
+        pathAnimation.delegate = self
         pathAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         
         add(pathAnimation, forKey: "path")
@@ -372,7 +351,7 @@ extension GKRadarGraphSerieLayer {
 extension GKRadarGraphSerieLayer: CAAnimationDelegate {
     
     //
-    // MARK: CAAnimation delegate implementation
+    // MARK: CAAnimationDelegate implementation
     //
     
     /// Called when an animation on this layer stops.
@@ -407,16 +386,12 @@ extension GKRadarGraphSerieLayer: CAAnimationDelegate {
         case .parameterByParameter(let duration):
             lastAnimatedVertexIndex += 1
             
-            if lastAnimatedVertexIndex < serie?.vertices.count {
-                
+            if lastAnimatedVertexIndex < serie?.vertices.count ?? 0 {
                 makeParameterPathAnimation(duration)
-            
             } else if lastAnimatedVertexIndex == serie?.vertices.count {
-                
                 decorationLayer?.isHidden = false
                 
                 if let nextLayerInstance = nextSerieLayer {
-                    
                     nextLayerInstance.isHidden = false
                     nextLayerInstance.makeParameterPathAnimation(duration)
                 }
@@ -454,13 +429,8 @@ extension GKRadarGraphSerieLayer {
         
         super.setNeedsDisplay()
         
-        guard let allSublayers = sublayers else {
-            
-            return
-        }
-        
         // For all sublayers (typically series layers), redraw as well.
-        for sublayer in allSublayers {
+        for sublayer in sublayers ?? [] {
             
             sublayer.setNeedsDisplay()
         }

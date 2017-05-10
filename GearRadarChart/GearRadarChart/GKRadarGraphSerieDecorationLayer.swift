@@ -100,12 +100,10 @@ extension GKRadarGraphSerieDecorationLayer {
     fileprivate func drawAllVertexDecorations(_ ctx: CGContext, serie: GKRadarGraphView.Serie) {
         
         guard let decorationInstance = serie.decoration, let decorationColor = serie.strokeColor else {
-            
             return
         }
         
         for vertex in serie.vertices {
-            
             drawVertexDecoration(ctx, decorationType: decorationInstance, decorationColor: decorationColor, decorationCenter: vertex)
         }
     }
@@ -123,7 +121,7 @@ extension GKRadarGraphSerieDecorationLayer {
         switch(decorationType) {
             
         case .circle(let radius):
-            bezierPath = UIBezierPath(arcCenter: decorationCenter, radius: radius, startAngle: 0, endAngle: CGFloat(M_2_PI), clockwise: false)
+            bezierPath = UIBezierPath(arcCenter: decorationCenter, radius: radius, startAngle: 0, endAngle: 2/CGFloat.pi, clockwise: false)
         case .diamond(let radius):
             bezierPath = traceDecorationPolygonBezierPath(4, radius: radius, center: decorationCenter, rotation: GKRadarGraphView.VERTICAL_OFFSET)
         case .square(let radius):

@@ -402,7 +402,7 @@ open class GKRadarGraphView : UIView, GKRadarGraphParameterDatasource {
 
 extension GKRadarGraphView : GKRadarGraphPlotAppearanceDelegate {
     
-    /// Margin of the chart relative to it's containing view's edge.
+    /// Margin of the chart relative to its containing view's edge.
     var _margin: CGFloat {
         return margin
     }

@@ -387,7 +387,7 @@ extension GKRadarGraphContainerLayer {
 
         ctx.addPath(bezierPath.cgPath)
         
-        ctx.setFillColor(graphBackgroundColor ?? UIColor.clear.cgColor)
+        ctx.setFillColor(graphBackgroundColor)
         ctx.setStrokeColor(outerStrokeColor.cgColor)
         ctx.setLineWidth(outerStrokeWidth)
         
@@ -399,16 +399,13 @@ extension GKRadarGraphContainerLayer {
     /// - parameter ctx: The context in which the gradations are drawn.
     fileprivate func drawGradations(_ ctx: CGContext) {
         
-        guard let strokeColor: CGColor = gradationStrokeColor.cgColor else {
-            
-            return
-        }
-        
         guard numberOfGradations > 0 && parameters.count > 0 else {
             
             return
         }
         
+        let strokeColor: CGColor = gradationStrokeColor.cgColor
+
         let bezierPath: UIBezierPath = UIBezierPath()
         
         for i in 0..<numberOfGradations {
