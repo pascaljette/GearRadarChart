@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F7E904421EC2AA2700DF62A1 /* GearRadarChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E904381EC2AA2700DF62A1 /* GearRadarChart.framework */; };
+		F7E904471EC2AA2700DF62A1 /* GearRadarChartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E904461EC2AA2700DF62A1 /* GearRadarChartTests.swift */; };
+		F7E904491EC2AA2700DF62A1 /* GearRadarChart.h in Headers */ = {isa = PBXBuildFile; fileRef = F7E9043B1EC2AA2700DF62A1 /* GearRadarChart.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7E904591EC2AA5A00DF62A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E904581EC2AA5A00DF62A1 /* AppDelegate.swift */; };
+		F7E904601EC2AA5A00DF62A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7E9045F1EC2AA5A00DF62A1 /* Assets.xcassets */; };
+		F7E904631EC2AA5A00DF62A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7E904611EC2AA5A00DF62A1 /* LaunchScreen.storyboard */; };
+		F7E9046E1EC2ABDC00DF62A1 /* GKRadarGraphContainerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E904681EC2ABDC00DF62A1 /* GKRadarGraphContainerLayer.swift */; };
+		F7E9046F1EC2ABDC00DF62A1 /* GKRadarGraphParameterDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E904691EC2ABDC00DF62A1 /* GKRadarGraphParameterDatasource.swift */; };
+		F7E904701EC2ABDC00DF62A1 /* GKRadarGraphPlotAppearanceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9046A1EC2ABDC00DF62A1 /* GKRadarGraphPlotAppearanceDelegate.swift */; };
+		F7E904711EC2ABDC00DF62A1 /* GKRadarGraphSerieDecorationLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9046B1EC2ABDC00DF62A1 /* GKRadarGraphSerieDecorationLayer.swift */; };
+		F7E904721EC2ABDC00DF62A1 /* GKRadarGraphSerieLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9046C1EC2ABDC00DF62A1 /* GKRadarGraphSerieLayer.swift */; };
+		F7E904731EC2ABDC00DF62A1 /* GKRadarGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9046D1EC2ABDC00DF62A1 /* GKRadarGraphView.swift */; };
+		F7E904751EC2AC5B00DF62A1 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E904741EC2AC5B00DF62A1 /* CGFloat+Extension.swift */; };
+		F7E904771EC2AC9800DF62A1 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E904761EC2AC9800DF62A1 /* Array+Extension.swift */; };
+		F7E9047F1EC2AD2E00DF62A1 /* GKRadarGraphModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E904781EC2AD2E00DF62A1 /* GKRadarGraphModel.swift */; };
+		F7E904801EC2AD2E00DF62A1 /* GKRadarGraphViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7E904791EC2AD2E00DF62A1 /* GKRadarGraphViewController.xib */; };
+		F7E904811EC2AD2E00DF62A1 /* GKRadarGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E9047A1EC2AD2E00DF62A1 /* GKRadarGraphViewController.swift */; };
+		F7E904871EC2AF2400DF62A1 /* GearRadarChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E904381EC2AA2700DF62A1 /* GearRadarChart.framework */; };
+		F7E904881EC2AF2400DF62A1 /* GearRadarChart.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7E904381EC2AA2700DF62A1 /* GearRadarChart.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F7E904431EC2AA2700DF62A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7E9042F1EC2AA2700DF62A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7E904371EC2AA2700DF62A1;
+			remoteInfo = GearRadarChart;
+		};
+		F7E904891EC2AF2400DF62A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7E9042F1EC2AA2700DF62A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7E904371EC2AA2700DF62A1;
+			remoteInfo = GearRadarChart;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F7E9048B1EC2AF2400DF62A1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F7E904881EC2AF2400DF62A1 /* GearRadarChart.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F7E904381EC2AA2700DF62A1 /* GearRadarChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GearRadarChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7E9043B1EC2AA2700DF62A1 /* GearRadarChart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GearRadarChart.h; sourceTree = "<group>"; };
+		F7E9043C1EC2AA2700DF62A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7E904411EC2AA2700DF62A1 /* GearRadarChartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GearRadarChartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7E904461EC2AA2700DF62A1 /* GearRadarChartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearRadarChartTests.swift; sourceTree = "<group>"; };
+		F7E904481EC2AA2700DF62A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7E904561EC2AA5A00DF62A1 /* GearRadarChartExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GearRadarChartExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7E904581EC2AA5A00DF62A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F7E9045F1EC2AA5A00DF62A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7E904621EC2AA5A00DF62A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F7E904641EC2AA5A00DF62A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7E904681EC2ABDC00DF62A1 /* GKRadarGraphContainerLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKRadarGraphContainerLayer.swift; sourceTree = "<group>"; };
+		F7E904691EC2ABDC00DF62A1 /* GKRadarGraphParameterDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKRadarGraphParameterDatasource.swift; sourceTree = "<group>"; };
+		F7E9046A1EC2ABDC00DF62A1 /* GKRadarGraphPlotAppearanceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKRadarGraphPlotAppearanceDelegate.swift; sourceTree = "<group>"; };
+		F7E9046B1EC2ABDC00DF62A1 /* GKRadarGraphSerieDecorationLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKRadarGraphSerieDecorationLayer.swift; sourceTree = "<group>"; };
+		F7E9046C1EC2ABDC00DF62A1 /* GKRadarGraphSerieLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKRadarGraphSerieLayer.swift; sourceTree = "<group>"; };
+		F7E9046D1EC2ABDC00DF62A1 /* GKRadarGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKRadarGraphView.swift; sourceTree = "<group>"; };
+		F7E904741EC2AC5B00DF62A1 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
+		F7E904761EC2AC9800DF62A1 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		F7E904781EC2AD2E00DF62A1 /* GKRadarGraphModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKRadarGraphModel.swift; sourceTree = "<group>"; };
+		F7E904791EC2AD2E00DF62A1 /* GKRadarGraphViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKRadarGraphViewController.xib; sourceTree = "<group>"; };
+		F7E9047A1EC2AD2E00DF62A1 /* GKRadarGraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKRadarGraphViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7E904341EC2AA2700DF62A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7E9043E1EC2AA2700DF62A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7E904421EC2AA2700DF62A1 /* GearRadarChart.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7E904531EC2AA5A00DF62A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7E904871EC2AF2400DF62A1 /* GearRadarChart.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F7E9042E1EC2AA2700DF62A1 = {
+			isa = PBXGroup;
+			children = (
+				F7E9043A1EC2AA2700DF62A1 /* GearRadarChart */,
+				F7E904451EC2AA2700DF62A1 /* GearRadarChartTests */,
+				F7E904571EC2AA5A00DF62A1 /* GearRadarChartExample */,
+				F7E904391EC2AA2700DF62A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7E904391EC2AA2700DF62A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7E904381EC2AA2700DF62A1 /* GearRadarChart.framework */,
+				F7E904411EC2AA2700DF62A1 /* GearRadarChartTests.xctest */,
+				F7E904561EC2AA5A00DF62A1 /* GearRadarChartExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7E9043A1EC2AA2700DF62A1 /* GearRadarChart */ = {
+			isa = PBXGroup;
+			children = (
+				F7E904681EC2ABDC00DF62A1 /* GKRadarGraphContainerLayer.swift */,
+				F7E904691EC2ABDC00DF62A1 /* GKRadarGraphParameterDatasource.swift */,
+				F7E9046A1EC2ABDC00DF62A1 /* GKRadarGraphPlotAppearanceDelegate.swift */,
+				F7E9046B1EC2ABDC00DF62A1 /* GKRadarGraphSerieDecorationLayer.swift */,
+				F7E9046C1EC2ABDC00DF62A1 /* GKRadarGraphSerieLayer.swift */,
+				F7E904741EC2AC5B00DF62A1 /* CGFloat+Extension.swift */,
+				F7E904761EC2AC9800DF62A1 /* Array+Extension.swift */,
+				F7E9046D1EC2ABDC00DF62A1 /* GKRadarGraphView.swift */,
+				F7E9043B1EC2AA2700DF62A1 /* GearRadarChart.h */,
+				F7E9043C1EC2AA2700DF62A1 /* Info.plist */,
+			);
+			path = GearRadarChart;
+			sourceTree = "<group>";
+		};
+		F7E904451EC2AA2700DF62A1 /* GearRadarChartTests */ = {
+			isa = PBXGroup;
+			children = (
+				F7E904461EC2AA2700DF62A1 /* GearRadarChartTests.swift */,
+				F7E904481EC2AA2700DF62A1 /* Info.plist */,
+			);
+			path = GearRadarChartTests;
+			sourceTree = "<group>";
+		};
+		F7E904571EC2AA5A00DF62A1 /* GearRadarChartExample */ = {
+			isa = PBXGroup;
+			children = (
+				F7E904781EC2AD2E00DF62A1 /* GKRadarGraphModel.swift */,
+				F7E904791EC2AD2E00DF62A1 /* GKRadarGraphViewController.xib */,
+				F7E9047A1EC2AD2E00DF62A1 /* GKRadarGraphViewController.swift */,
+				F7E904581EC2AA5A00DF62A1 /* AppDelegate.swift */,
+				F7E9045F1EC2AA5A00DF62A1 /* Assets.xcassets */,
+				F7E904611EC2AA5A00DF62A1 /* LaunchScreen.storyboard */,
+				F7E904641EC2AA5A00DF62A1 /* Info.plist */,
+			);
+			path = GearRadarChartExample;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F7E904351EC2AA2700DF62A1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7E904491EC2AA2700DF62A1 /* GearRadarChart.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F7E904371EC2AA2700DF62A1 /* GearRadarChart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7E9044C1EC2AA2700DF62A1 /* Build configuration list for PBXNativeTarget "GearRadarChart" */;
+			buildPhases = (
+				F7E904331EC2AA2700DF62A1 /* Sources */,
+				F7E904341EC2AA2700DF62A1 /* Frameworks */,
+				F7E904351EC2AA2700DF62A1 /* Headers */,
+				F7E904361EC2AA2700DF62A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GearRadarChart;
+			productName = GearRadarChart;
+			productReference = F7E904381EC2AA2700DF62A1 /* GearRadarChart.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F7E904401EC2AA2700DF62A1 /* GearRadarChartTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7E9044F1EC2AA2700DF62A1 /* Build configuration list for PBXNativeTarget "GearRadarChartTests" */;
+			buildPhases = (
+				F7E9043D1EC2AA2700DF62A1 /* Sources */,
+				F7E9043E1EC2AA2700DF62A1 /* Frameworks */,
+				F7E9043F1EC2AA2700DF62A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7E904441EC2AA2700DF62A1 /* PBXTargetDependency */,
+			);
+			name = GearRadarChartTests;
+			productName = GearRadarChartTests;
+			productReference = F7E904411EC2AA2700DF62A1 /* GearRadarChartTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F7E904551EC2AA5A00DF62A1 /* GearRadarChartExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7E904651EC2AA5A00DF62A1 /* Build configuration list for PBXNativeTarget "GearRadarChartExample" */;
+			buildPhases = (
+				F7E904521EC2AA5A00DF62A1 /* Sources */,
+				F7E904531EC2AA5A00DF62A1 /* Frameworks */,
+				F7E904541EC2AA5A00DF62A1 /* Resources */,
+				F7E9048B1EC2AF2400DF62A1 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7E9048A1EC2AF2400DF62A1 /* PBXTargetDependency */,
+			);
+			name = GearRadarChartExample;
+			productName = GearRadarChartExample;
+			productReference = F7E904561EC2AA5A00DF62A1 /* GearRadarChartExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7E9042F1EC2AA2700DF62A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Pascal Jette";
+				TargetAttributes = {
+					F7E904371EC2AA2700DF62A1 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = WHYWHA27N5;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					F7E904401EC2AA2700DF62A1 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = WHYWHA27N5;
+						ProvisioningStyle = Automatic;
+					};
+					F7E904551EC2AA5A00DF62A1 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = WHYWHA27N5;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F7E904321EC2AA2700DF62A1 /* Build configuration list for PBXProject "GearRadarChart" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F7E9042E1EC2AA2700DF62A1;
+			productRefGroup = F7E904391EC2AA2700DF62A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7E904371EC2AA2700DF62A1 /* GearRadarChart */,
+				F7E904401EC2AA2700DF62A1 /* GearRadarChartTests */,
+				F7E904551EC2AA5A00DF62A1 /* GearRadarChartExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7E904361EC2AA2700DF62A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7E9043F1EC2AA2700DF62A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7E904541EC2AA5A00DF62A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7E904801EC2AD2E00DF62A1 /* GKRadarGraphViewController.xib in Resources */,
+				F7E904631EC2AA5A00DF62A1 /* LaunchScreen.storyboard in Resources */,
+				F7E904601EC2AA5A00DF62A1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7E904331EC2AA2700DF62A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7E904731EC2ABDC00DF62A1 /* GKRadarGraphView.swift in Sources */,
+				F7E904711EC2ABDC00DF62A1 /* GKRadarGraphSerieDecorationLayer.swift in Sources */,
+				F7E904721EC2ABDC00DF62A1 /* GKRadarGraphSerieLayer.swift in Sources */,
+				F7E904701EC2ABDC00DF62A1 /* GKRadarGraphPlotAppearanceDelegate.swift in Sources */,
+				F7E9046F1EC2ABDC00DF62A1 /* GKRadarGraphParameterDatasource.swift in Sources */,
+				F7E904751EC2AC5B00DF62A1 /* CGFloat+Extension.swift in Sources */,
+				F7E9046E1EC2ABDC00DF62A1 /* GKRadarGraphContainerLayer.swift in Sources */,
+				F7E904771EC2AC9800DF62A1 /* Array+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7E9043D1EC2AA2700DF62A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7E904471EC2AA2700DF62A1 /* GearRadarChartTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7E904521EC2AA5A00DF62A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7E904811EC2AD2E00DF62A1 /* GKRadarGraphViewController.swift in Sources */,
+				F7E904591EC2AA5A00DF62A1 /* AppDelegate.swift in Sources */,
+				F7E9047F1EC2AD2E00DF62A1 /* GKRadarGraphModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F7E904441EC2AA2700DF62A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7E904371EC2AA2700DF62A1 /* GearRadarChart */;
+			targetProxy = F7E904431EC2AA2700DF62A1 /* PBXContainerItemProxy */;
+		};
+		F7E9048A1EC2AF2400DF62A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7E904371EC2AA2700DF62A1 /* GearRadarChart */;
+			targetProxy = F7E904891EC2AF2400DF62A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F7E904611EC2AA5A00DF62A1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7E904621EC2AA5A00DF62A1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F7E9044A1EC2AA2700DF62A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F7E9044B1EC2AA2700DF62A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F7E9044D1EC2AA2700DF62A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WHYWHA27N5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GearRadarChart/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pascal-jette.GearRadarChart";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F7E9044E1EC2AA2700DF62A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WHYWHA27N5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GearRadarChart/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pascal-jette.GearRadarChart";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F7E904501EC2AA2700DF62A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = WHYWHA27N5;
+				INFOPLIST_FILE = GearRadarChartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pascal-jette.GearRadarChartTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F7E904511EC2AA2700DF62A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = WHYWHA27N5;
+				INFOPLIST_FILE = GearRadarChartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pascal-jette.GearRadarChartTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F7E904661EC2AA5A00DF62A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WHYWHA27N5;
+				INFOPLIST_FILE = GearRadarChartExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pascal-jette.GearRadarChartExample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F7E904671EC2AA5A00DF62A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WHYWHA27N5;
+				INFOPLIST_FILE = GearRadarChartExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pascal-jette.GearRadarChartExample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7E904321EC2AA2700DF62A1 /* Build configuration list for PBXProject "GearRadarChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7E9044A1EC2AA2700DF62A1 /* Debug */,
+				F7E9044B1EC2AA2700DF62A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7E9044C1EC2AA2700DF62A1 /* Build configuration list for PBXNativeTarget "GearRadarChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7E9044D1EC2AA2700DF62A1 /* Debug */,
+				F7E9044E1EC2AA2700DF62A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F7E9044F1EC2AA2700DF62A1 /* Build configuration list for PBXNativeTarget "GearRadarChartTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7E904501EC2AA2700DF62A1 /* Debug */,
+				F7E904511EC2AA2700DF62A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F7E904651EC2AA5A00DF62A1 /* Build configuration list for PBXNativeTarget "GearRadarChartExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7E904661EC2AA5A00DF62A1 /* Debug */,
+				F7E904671EC2AA5A00DF62A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7E9042F1EC2AA2700DF62A1 /* Project object */;
+}
