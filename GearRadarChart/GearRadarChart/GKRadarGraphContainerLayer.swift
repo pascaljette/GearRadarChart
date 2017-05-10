@@ -35,10 +35,10 @@ internal class GKRadarGraphContainerLayer : CALayer {
     fileprivate enum PassMode {
         
         /// Auto-adjust the circle radius (no rendering).
-        case auto_ADJUST
+        case autoAdjust
         
         /// Buffer the vertices before rendering.  Draw text at the same time.
-        case draw_TEXT(CGContext)
+        case drawText(CGContext)
     }
     
     //
@@ -283,12 +283,12 @@ extension GKRadarGraphContainerLayer {
             
             switch(passmode) {
                 
-            case .auto_ADJUST:
+            case .autoAdjust:
                 let minimumRadius = calculateMinimumCircleRadius(adjustedPosition, outerVertex: parameters[i].outerVertex!, drawRect: rect, stringRect: stringRect)
                 
                 circleRadius = min(minimumRadius, minimumRadius)
                 
-            case .draw_TEXT(let context):
+            case .drawText(let context):
                 
                 self.contentsScale = UIScreen.main.scale
                 
@@ -471,10 +471,10 @@ extension GKRadarGraphContainerLayer {
         circleRadius = min(self.frame.width / 2.0, self.frame.height / 2.0) - margin
         
         // Do a first pass without rendering so that we can adjust the circle radius.
-        calculateOuterVertices(self.frame, passmode: .auto_ADJUST)
+        calculateOuterVertices(self.frame, passmode: .autoAdjust)
         
         // Do a next pass so we can save the final position and parameters of the vertices.
-        calculateOuterVertices(self.frame, passmode: .draw_TEXT(ctx))
+        calculateOuterVertices(self.frame, passmode: .drawText(ctx))
         
         // Draw the gradations.
         drawGradations(ctx)
