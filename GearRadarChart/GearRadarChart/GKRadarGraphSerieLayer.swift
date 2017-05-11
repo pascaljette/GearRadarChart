@@ -46,6 +46,16 @@ internal class GKRadarGraphSerieLayer: CAShapeLayer {
         doInit()
     }
     
+    /// Init from another layer.  Needed to implement for layer copy when setNeedsDisplay is called.
+    ///
+    /// - parameter layer; Layer to copy.
+    override init(layer: Any) {
+        super.init(layer: layer)
+        
+        // Default is false, meaning the layer is not re-drawn when its bounds change.
+        needsDisplayOnBoundsChange = true
+    }
+    
     /// Common setup function
     fileprivate func doInit() {
      
@@ -390,6 +400,7 @@ extension GKRadarGraphSerieLayer: CAAnimationDelegate {
                 makeParameterPathAnimation(duration)
             } else if lastAnimatedVertexIndex == serie?.vertices.count {
                 decorationLayer?.isHidden = false
+                removeAllAnimations()
                 
                 if let nextLayerInstance = nextSerieLayer {
                     nextLayerInstance.isHidden = false
@@ -400,7 +411,8 @@ extension GKRadarGraphSerieLayer: CAAnimationDelegate {
         case .scaleOneByOne(let duration):
             
             decorationLayer?.isHidden = false
-
+            removeAllAnimations()
+            
             if let nextLayerInstance = nextSerieLayer {
                 
                 nextLayerInstance.isHidden = false
@@ -409,6 +421,7 @@ extension GKRadarGraphSerieLayer: CAAnimationDelegate {
             
         case .scaleAll:
             decorationLayer?.isHidden = false
+            removeAllAnimations()
             
         case .none:
             break

@@ -177,12 +177,10 @@ extension GKRadarGraphContainerLayer {
     fileprivate var circleCenter: CGPoint {
         
         get {
-            
             return parameterDatasource?._circleCenter ?? CGPoint.zero
         }
         
         set {
-            
             parameterDatasource?._circleCenter = newValue
         }
     }
@@ -192,12 +190,10 @@ extension GKRadarGraphContainerLayer {
     fileprivate var circleRadius: CGFloat {
         
         get {
-            
             return parameterDatasource?._circleRadius ?? 0
         }
         
         set {
-            
             parameterDatasource?._circleRadius = newValue
         }
     }
@@ -342,7 +338,7 @@ extension GKRadarGraphContainerLayer {
         return newRadius
     }
     
-    /// Calcualte the exterior angle value of a vertex based on its index.
+    /// Calculate the exterior angle value of a vertex based on its index.
     ///
     /// - parameter vertexIndex: Index of the vertex in the polygon.
     ///

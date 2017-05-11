@@ -68,10 +68,11 @@ class GKRadarGraphViewController: UIViewController {
     //
     
     /// Model containing info about generating the graph.
-    let model: GKRadarGraphModel
+    var model: GKRadarGraphModel
     
     /// Animation picker view data
     let pickerViewData: [AnimationPickerType] = [.scaleAll, .scaleOneByOne, .parameterByParameter]
+    
     
     //
     // MARK: Initialisation.
@@ -192,4 +193,14 @@ extension GKRadarGraphViewController {
 
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    @IBAction func randomizeButtonTapped(_ sender: Any) {
+        
+        model = GKRadarGraphModel.random
+        radarGraphView.parameters = model.parameters
+        radarGraphView.series = model.series
+        radarGraphView.setNeedsLayout()
+        radarGraphView.setNeedsDisplay()
+    }
+
 }

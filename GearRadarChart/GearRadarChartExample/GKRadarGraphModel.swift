@@ -27,29 +27,88 @@ import GearRadarChart
 struct GKRadarGraphModel {
     
     //
-    // MARK: Stored properties
+    // MARK: Randomization
     //
-
-    /// Array of parameters for the plot.
-    var parameters: [GKRadarGraphView.Parameter] = []
+    private static let allowedColors = [UIColor.red,
+                                        UIColor.black,
+                                        UIColor.blue,
+                                        UIColor.purple,
+                                        UIColor.cyan,
+                                        UIColor.yellow,
+                                        UIColor.orange,
+                                        UIColor.green,
+                                        UIColor.magenta,
+                                        UIColor.brown]
     
-    /// Series representing the data in the plot.
-    var series: [GKRadarGraphView.Serie] = []
-
-    //
-    // MARK: Initialisation
-    //
-
-    /// Initialize with default values.
-    init() {
+    private static let randomParameterMaxLength: UInt32 = 8
+    
+    private static let allowedDecorations: [GKRadarGraphView.Serie.DecorationType] = [
+        .square(8.0),
+        .circle(6.0),
+        .diamond(8.0)
+    ]
+    
+    private static func randomAlphaNumericString(length: Int) -> String {
+        let allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let allowedCharsCount = UInt32(allowedChars.characters.count)
+        var randomString = ""
         
+        for _ in 0..<length {
+            let randomNum = Int(arc4random_uniform(allowedCharsCount))
+            let randomIndex = allowedChars.index(allowedChars.startIndex, offsetBy: randomNum)
+            let newCharacter = allowedChars[randomIndex]
+            randomString += String(newCharacter)
+        }
+        
+        return randomString
+    }
+
+    static var random: GKRadarGraphModel {
+        
+        var model = GKRadarGraphModel()
+
+        // Randomize parameters.
+        let numberOfParameters = arc4random_uniform(10) + 3
+        model.parameters = (1...numberOfParameters).map { _ in
+            let name = randomAlphaNumericString(length: Int(arc4random_uniform(randomParameterMaxLength) + 1))
+            return GKRadarGraphView.Parameter(name: name)
+        }
+        
+        // Randomize series.
+        var randomizedAllowedColors = GKRadarGraphModel.allowedColors.shuffled()
+        let numberOfSeries = arc4random_uniform(UInt32(allowedColors.count)) + 1
+        
+        model.series = (1...numberOfSeries).map { _ in
+            var serie = GKRadarGraphView.Serie()
+            
+            let color = randomizedAllowedColors.popLast()!
+            
+            serie.strokeColor = color
+            serie.strokeWidth = 4.0
+            serie.fillMode = .solid(color.withAlphaComponent(0.7))
+            serie.decoration = allowedDecorations.shuffled().first!
+            
+            serie.percentageValues = (1...numberOfParameters).map { _ in
+                return CGFloat(arc4random_uniform(100)) / 100
+            }
+            
+            return serie
+        }
+        
+        return model
+    }
+    
+    static var defaultModel: GKRadarGraphModel {
+        
+        var model = GKRadarGraphModel()
+
         let hpParameter: GKRadarGraphView.Parameter = GKRadarGraphView.Parameter(name: "HP")
         let mpParameter: GKRadarGraphView.Parameter = GKRadarGraphView.Parameter(name: "MP")
         let strengthParameter: GKRadarGraphView.Parameter = GKRadarGraphView.Parameter(name: "STR")
         let defenseParameter: GKRadarGraphView.Parameter = GKRadarGraphView.Parameter(name: "DF")
         let magicParameter: GKRadarGraphView.Parameter = GKRadarGraphView.Parameter(name: "MGC")
         
-        parameters = [hpParameter, mpParameter, strengthParameter, defenseParameter, magicParameter]
+        model.parameters = [hpParameter, mpParameter, strengthParameter, defenseParameter, magicParameter]
         
         // We only support gradients for a single serie radar graph
         var firstSerie = GKRadarGraphView.Serie()
@@ -81,7 +140,19 @@ struct GKRadarGraphModel {
         thirdSerie.fillMode = .solid(thirdSerieFillColor)
         thirdSerie.percentageValues = [0.5, 0.9, 0.5, 0.5, 0.6]
         thirdSerie.decoration = .diamond(8.0)
-                
-        series = [firstSerie, secondSerie, thirdSerie]
+        
+        model.series = [firstSerie, secondSerie, thirdSerie]
+
+        return model
     }
+    
+    //
+    // MARK: Stored properties
+    //
+
+    /// Array of parameters for the plot.
+    var parameters: [GKRadarGraphView.Parameter] = []
+    
+    /// Series representing the data in the plot.
+    var series: [GKRadarGraphView.Serie] = []
 }

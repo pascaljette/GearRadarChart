@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-        let viewController = GKRadarGraphViewController(model: GKRadarGraphModel())
+        let viewController = GKRadarGraphViewController(model: GKRadarGraphModel.defaultModel)
         let navigationController = UINavigationController(rootViewController: viewController)
         
         self.window!.rootViewController = navigationController
